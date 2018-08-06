@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: simon.ma
-//Last modified: Sun, Aug 05, 2018 08:34:41 PM
+//Last modified: Sun, Aug 05, 2018 08:38:46 PM
 //Codeset: UTF-8
 requires maya "2018";
 requires -nodeType "RenderMan" -nodeType "PxrDebugShadingContext" -nodeType "PxrDisney"
@@ -17,17 +17,19 @@ fileInfo "osv" "Mac OS X 10.13.6";
 createNode transform -s -n "persp";
 	rename -uid "E59FCD6F-4146-6579-873C-F3B65336F506";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.3990193661199486 0.40128595541733958 29.113518276365085 ;
-	setAttr ".r" -type "double3" 12.413379604198873 2.7511718097073983 -9.9507027174081187e-17 ;
+	setAttr ".t" -type "double3" 1.3984382008730916 0.34627698706490923 29.101424258622579 ;
+	setAttr ".r" -type "double3" 12.413379604198873 2.7511718097073774 8.6173083729931892e-14 ;
+	setAttr ".rp" -type "double3" -5.5511151231259405e-17 0 -3.5527136788005009e-15 ;
+	setAttr ".rpt" -type "double3" -1.6647462955809563e-16 7.6370338323430728e-16 8.9718526188976063e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "EBB27D9A-834C-3772-93FE-3CAD55C5B369";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 29.844822147791611;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 29.844822147791614;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 6.8168301582336426 0 ;
+	setAttr ".tp" -type "double3" -0.00058116524685705945 6.7618211898812133 -0.012094017742511013 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "461F6877-EE4F-6DAE-319B-098FB5CB31FC";
@@ -407,7 +409,6 @@ createNode mesh -n "eyeLShape" -p "eyeL";
 		 381 360 1 362 381 1 363 381 1 364 381 1 365 381 1 366 381 1 367 381 1 368 381 1 369 381 1
 		 370 381 1 371 381 1 372 381 1 373 381 1 374 381 1 375 381 1 376 381 1 377 381 1 378 381 1
 		 379 381 1;
-	setAttr ".n[0]" -type "float3"  1e+20 1e+20 1e+20;
 	setAttr -s 400 -ch 1560 ".fc[0:399]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 22 21
@@ -1243,7 +1244,6 @@ createNode mesh -n "capShape" -p "cap";
 		 5 19 1 19 21 1 19 4 1 4 8 1 19 22 1 22 11 1 11 4 1 5 9 1 9 22 1 9 7 1 7 10 1 10 22 1
 		 10 6 1 6 11 1 10 23 1 23 13 1 13 6 1 7 12 1 12 23 1 12 1 1 14 23 1 0 13 1 12 24 1
 		 24 15 1 9 24 1 18 24 1 13 25 1 25 11 1 17 25 1 8 25 1;
-	setAttr ".n[0]" -type "float3"  1e+20 1e+20 1e+20;
 	setAttr -s 24 -ch 96 ".fc[0:23]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 20 14 24
@@ -1621,7 +1621,6 @@ createNode mesh -n "eyeRShape" -p "eyeR";
 		 381 360 1 362 381 1 363 381 1 364 381 1 365 381 1 366 381 1 367 381 1 368 381 1 369 381 1
 		 370 381 1 371 381 1 372 381 1 373 381 1 374 381 1 375 381 1 376 381 1 377 381 1 378 381 1
 		 379 381 1;
-	setAttr ".n[0]" -type "float3"  1e+20 1e+20 1e+20;
 	setAttr -s 400 -ch 1560 ".fc[0:399]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 22 21
@@ -2457,7 +2456,6 @@ createNode mesh -n "sporethingShape" -p "sporething";
 		 5 19 1 19 21 1 19 4 1 4 8 1 19 22 1 22 11 1 11 4 1 5 9 1 9 22 1 9 7 1 7 10 1 10 22 1
 		 10 6 1 6 11 1 10 23 1 23 13 1 13 6 1 7 12 1 12 23 1 12 1 1 14 23 1 0 13 1 12 24 1
 		 24 15 1 9 24 1 18 24 1 13 25 1 25 11 1 17 25 1 8 25 1;
-	setAttr ".n[0]" -type "float3"  1e+20 1e+20 1e+20;
 	setAttr -s 24 -ch 96 ".fc[0:23]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 20 14 24
@@ -3721,7 +3719,6 @@ createNode mesh -n "bodyShape" -p "body";
 		 1370 827 0 1371 828 0 1372 825 0 1095 1373 0 1374 1081 0 1375 1080 0 1376 1150 0
 		 1377 1093 0 1378 1092 0 1379 1094 0 1381 842 0 841 1380 0 1382 843 0 1383 844 0 1384 845 0
 		 1385 846 0 1386 847 0 1387 848 0;
-	setAttr ".n[0]" -type "float3"  1e+20 1e+20 1e+20;
 	setAttr -s 1378 -ch 5516 ".fc";
 	setAttr ".fc[0:499]" -type "polyFaces" 
 		f 4 0 1 2 3
@@ -6529,7 +6526,6 @@ createNode mesh -n "tongueShape" -p "tongue";
 		 32 5 1 40 41 1 11 24 1 32 33 1 21 25 1 25 36 1 36 37 1 3 28 1 28 29 1 25 9 1 35 36 1
 		 27 28 1 26 10 1 9 27 0 25 28 1 21 29 0 22 30 1 23 31 0 24 32 1 11 33 0 34 13 1 12 35 0
 		 15 36 1 18 37 0 19 38 1 20 39 0 17 40 1 14 41 0;
-	setAttr ".n[0]" -type "float3"  1e+20 1e+20 1e+20;
 	setAttr -s 40 -ch 160 ".fc[0:39]" -type "polyFaces" 
 		f 4 0 1 2 3
 		mu 0 4 0 1 4 3
@@ -6616,22 +6612,22 @@ createNode mesh -n "tongueShape" -p "tongue";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "77163F12-864D-FD4B-70CC-379D199701BC";
+	rename -uid "47DC6138-AA4A-4EBE-6F44-D984433C4132";
 	setAttr -s 7 ".lnk";
 	setAttr -s 7 ".slnk";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "71303F39-B945-1B92-F540-C893225EADE4";
+	rename -uid "28D4B700-8E43-D9CB-029B-19972AA9A1A7";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "95933CE7-A941-9155-EFDE-F49997842E84";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "7B12A5DC-D942-1582-E107-F89110CA24E7";
+	rename -uid "39034463-D844-B2CF-8999-BEA1C65ED89F";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "97D18654-244E-9CEF-563F-7BB45CA16993";
 	setAttr ".g" yes;
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "EA904581-4649-1F60-58F0-C58D290FC616";
+	rename -uid "C21572C2-8A4F-985F-22A1-7C90FBB59DD5";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "11611013-C344-E453-E471-D1AAC725F67C";
+	rename -uid "D68F9402-F34A-7592-25D3-44BFF093408F";
 createNode surfaceShader -n "surfaceShader1";
 	rename -uid "2930017A-2A46-0B28-0561-2E85EC804F56";
 createNode PxrDisney -n "toungePink";
@@ -7352,8 +7348,6 @@ createNode RenderMan -s -n "rmanFinalGlobals";
 		-dt "string";
 	addAttr -ci true -k true -sn "rman__torattr___depthOfField" -ln "rman__torattr___depthOfField" 
 		-dv -1 -at "long";
-	addAttr -ci true -h true -sn "rman__torattr___passNameFormat" -ln "rman__torattr___passNameFormat" 
-		-dt "string";
 	addAttr -ci true -k true -sn "rman__riopt___CropWindow" -ln "rman__riopt___CropWindow" 
 		-at "compound" -nc 2;
 	addAttr -ci true -k true -sn "rman__riopt___CropWindowX" -ln "rman__riopt___CropWindowX" 
@@ -7388,7 +7382,6 @@ createNode RenderMan -s -n "rmanFinalGlobals";
 	setAttr ".rman__torattr___cameraFlavor" -type "string" "";
 	setAttr ".rman__torattr___lightcrew" -type "string" "";
 	setAttr -k on ".rman__torattr___depthOfField" 1;
-	setAttr ".rman__torattr___passNameFormat" -type "string" "";
 	setAttr -k on ".rman__riopt___CropWindowX" -type "float2" 0 1 ;
 	setAttr -k on ".rman__riopt___CropWindowY" -type "float2" 0 1 ;
 createNode RenderMan -s -n "rmanFinalOutputGlobals0";
